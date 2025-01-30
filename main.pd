@@ -1,0 +1,160 @@
+#N canvas 4 50 1912 998 10;
+#X obj 816 817 loadbang;
+#X obj 196 585 r aux;
+#X obj 796 148 r notes;
+#X obj 701 392 throw~ outL;
+#X obj 781 392 throw~ outR;
+#X obj 1011 840 r~ inL;
+#X obj 1064 840 r~ inR;
+#X obj 148 184 r knob1;
+#X obj 148 260 s screenLine1;
+#X msg 816 842 \; screenLine1 Basic \; screenLine2 Organelle \; screenLine3
+Patch \; screenLine4 -------- \; screenLine5 Hello! \;;
+#X obj 243 184 r knob2;
+#X obj 337 184 r knob3;
+#X obj 432 184 r knob4;
+#X msg 243 223 Knob 2: \$1;
+#X msg 148 223 Knob 1: \$1;
+#X msg 338 223 Knob 3: \$1;
+#X msg 433 223 Knob 4: \$1;
+#X obj 243 260 s screenLine2;
+#X obj 338 260 s screenLine3;
+#X obj 433 260 s screenLine4;
+#X obj 796 177 unpack;
+#X obj 754 314 osc~;
+#X obj 755 253 mtof;
+#X floatatom 754 282 5 0 0 0 - - -;
+#X obj 754 355 *~;
+#X obj 834 256 / 127;
+#X obj 833 318 line~;
+#X msg 833 285 \$1 10;
+#X text 848 176 Left: MIDI note / Right: Velocity;
+#X text 848 147 Receive MIDI notes;
+#X obj 62 351 int;
+#X obj 62 294 * 6;
+#X obj 62 320 + 1;
+#X msg 62 380 \; led \$1 \;;
+#X msg 119 351 \; led 0 \;;
+#X obj 115 293 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 116 320 del 1000;
+#X text 1122 841 L/R inputs are not used here.;
+#X text 1122 878 be wary of feedback.;
+#X text 1122 861 If testing with internal mic & speaker \,;
+#X msg 72 706 Aux held!;
+#X obj 73 740 s screenLine5;
+#X msg 300 672 Aux released!;
+#X obj 302 705 s screenLine5;
+#X obj 197 620 sel 1;
+#X obj 275 826 s screenLine5;
+#X msg 274 794 Aux off;
+#X obj 272 715 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 274 742 delay 1000;
+#X msg 313 636 \; led 7 \;;
+#X msg 340 781 \; led 0 \;;
+#X msg 73 654 \; led 1 \;;
+#X text 66 534 When Aux is pushed \, sel sends a signal left if the
+value is 1 (button is down) and right if the value is 0 (note off \,
+button has been released):;
+#X obj 981 614 moses 72;
+#X msg 972 656 \; led 3;
+#X msg 1031 658 \; led 4;
+#X obj 1149 617 sel 0;
+#X msg 1150 673 \; led 0;
+#X obj 1150 646 delay 10;
+#X obj 911 227 send MIDILEDOn;
+#X obj 911 204 send MIDILEDOff;
+#X obj 981 569 receive MIDILEDOn;
+#X obj 1148 571 receive MIDILEDOff;
+#X text 1023 213 Send note/velocity data to wireless functions;
+#X text 1059 492 WIRELESS FUNCTIONS;
+#X text 866 112 BASIC SYNTH / MIDI FUNCTIONS;
+#X text 197 505 AUX BUTTON;
+#X text 231 124 KNOB FUNCTIONS;
+#X text 962 726 Knob 1's LED functions can interfere with these!;
+#X text 69 771 Right sets LED to red \; and prints a message \; to
+line 5;
+#X text 1223 602 Check for a velocity value of zero \; (note off) and
+if found \, wait 10ms \; and turn the LED off.;
+#X text 329 23 Use this patch to see how basic Organelle / Pd \; functions
+work \, and as a template for new patches.;
+#X text 713 20 You can play a basic synth \, change knob values \,
+use \; the aux button \, send screen messages and set the LED \; colour.
+A simple wireless connection is also included \,;
+#X text 31 23 ORGANELLE STARTER PATCH / CHEAT SHEET \; v1.0 \; nick.dimmock@gmail.com
+\; CC0 / Public domain;
+#X text 168 149 Knobs feed values (0-1) to screenlines 1-4:;
+#X text 187 331 Knob 1 changes the LED colour and turns it on \; After
+1s \, it turns it off again \; LED colours range from 1 to 7 \, so
+we multiply \; the knob value by 6 and add 1;
+#X text 877 284 Pack velocity value with 10 (for ms);
+#X text 876 313 Use line~ to create 10ms ramp to new velocity \; (to
+avoid note-on clicks);
+#X text 596 252 Convert note to frequency;
+#X text 597 282 Check the result here >;
+#X text 598 314 Here's our simple osc >;
+#X text 785 355 Set osc amplitude (multiply by velocity);
+#X text 876 254 Divide velocity by 127 to get 0..1 value;
+#X text 625 414 Thow oscillator output to Organelle L&R handlers in
+mother.pd to create sound!;
+#X text 383 729 Left sets the LED to white and shows a \; 'released'
+message on line 5 then after 1a \; turns the LED off and shows an 'off'
+message.;
+#X text 963 515 Two wireless fucntions triggered by the synth above.
+MIDILEDOn recieves the MIDI note value \, and MIDILEDOff receives the
+velocity value.;
+#X text 724 578 Check MIDI note value. Lower than 72 \; is ocatve one
+\, 72 or higher is ocatave \; two. Set a green or blue LED depending
+\; on the result.;
+#X text 723 636 The moses function is used to check \; the value and
+route the signal.;
+#X text 970 688 Green;
+#X text 1033 689 Blue;
+#X connect 0 0 9 0;
+#X connect 1 0 44 0;
+#X connect 2 0 20 0;
+#X connect 7 0 14 0;
+#X connect 7 0 31 0;
+#X connect 7 0 35 0;
+#X connect 10 0 13 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 17 0;
+#X connect 14 0 8 0;
+#X connect 15 0 18 0;
+#X connect 16 0 19 0;
+#X connect 20 0 22 0;
+#X connect 20 0 59 0;
+#X connect 20 1 25 0;
+#X connect 20 1 60 0;
+#X connect 21 0 24 0;
+#X connect 22 0 23 0;
+#X connect 23 0 21 0;
+#X connect 24 0 3 0;
+#X connect 24 0 4 0;
+#X connect 25 0 27 0;
+#X connect 26 0 24 1;
+#X connect 27 0 26 0;
+#X connect 30 0 33 0;
+#X connect 31 0 32 0;
+#X connect 32 0 30 0;
+#X connect 35 0 36 0;
+#X connect 36 0 34 0;
+#X connect 40 0 41 0;
+#X connect 42 0 43 0;
+#X connect 44 0 40 0;
+#X connect 44 0 51 0;
+#X connect 44 1 42 0;
+#X connect 44 1 49 0;
+#X connect 44 1 47 0;
+#X connect 46 0 45 0;
+#X connect 47 0 48 0;
+#X connect 48 0 46 0;
+#X connect 48 0 50 0;
+#X connect 53 0 54 0;
+#X connect 53 1 55 0;
+#X connect 56 0 58 0;
+#X connect 58 0 57 0;
+#X connect 61 0 53 0;
+#X connect 62 0 56 0;
