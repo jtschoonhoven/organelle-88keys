@@ -1,4 +1,4 @@
-#N canvas 177 38 1335 916 12;
+#N canvas 378 38 1134 916 12;
 #X obj 688 327 unpack, f 34;
 #X text 38 33 This subpatch receives an instrument name and returns a list of: (midi_note \, array_name \, note_offset \, num_samples), f 65;
 #X obj 688 297 r notes;
