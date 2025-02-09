@@ -1,1 +1,1 @@
-instrument Grand\ Piano;
+instrument Tubed\ Rhodes;

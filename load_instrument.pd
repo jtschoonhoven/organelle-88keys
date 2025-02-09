@@ -1,4 +1,4 @@
-#N canvas -1706 -433 1706 1387 12;
+#N canvas 1302 277 1706 1387 12;
 #X obj 543 409 unpack, f 34;
 #X text 38 33 This subpatch receives an instrument name and returns a list of: (midi_note \, array_name \, note_offset \, num_samples), f 65;
 #X obj 543 379 r notes;
@@ -35,7 +35,7 @@
 #X obj 669 1120 +~;
 #X obj 779 538 t f f;
 #X obj 497 470 t f f f;
-#X obj 669 1154 outlet~;
+#X obj 669 1189 outlet~;
 #X obj 373 148 t b s b b b, f 14;
 #X obj 413 277 switch~;
 #X msg 581 229 0;
@@ -46,6 +46,7 @@
 #X text 701 789 <-- voice \, midi_note \, velocity \, note_offset \, num_samples \, array_name, f 69;
 #X floatatom 778 442 5 0 0 0 velocity\ --> - - 0;
 #X text 166 607 assign voice -->;
+#X obj 669 1156 *~ 0.5;
 #X connect 0 0 21 0;
 #X connect 0 1 45 0;
 #X connect 2 0 0 0;
@@ -81,7 +82,7 @@
 #X connect 30 0 33 0;
 #X connect 31 0 33 0;
 #X connect 32 0 33 0;
-#X connect 33 0 36 0;
+#X connect 33 0 47 0;
 #X connect 34 1 4 1;
 #X connect 35 1 4 0;
 #X connect 35 2 18 0;
@@ -97,3 +98,4 @@
 #X connect 40 0 38 0;
 #X connect 41 0 43 0;
 #X connect 45 0 34 0;
+#X connect 47 0 36 0;
