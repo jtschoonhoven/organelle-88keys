@@ -1,4 +1,4 @@
-#N canvas -1706 -433 1706 1387 10;
+#N canvas 0 38 1512 916 10;
 #X obj 603 23 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 709 250 folder_list ./instruments/*/;
 #X obj 733 183 text define instruments;
