@@ -1,1 +1,1 @@
-instrument Rhodes;
+instrument Vox;
