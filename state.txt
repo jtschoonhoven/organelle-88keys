@@ -1,1 +1,1 @@
-instrument Cinematic\ Piano;
+instrument Rhodes;
