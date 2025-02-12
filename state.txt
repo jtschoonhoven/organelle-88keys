@@ -1,1 +1,1 @@
-instrument Vox;
+instrument Studio\ Piano;

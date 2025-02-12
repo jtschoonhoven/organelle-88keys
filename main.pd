@@ -1,4 +1,4 @@
-#N canvas 1003 0 2005 1664 10;
+#N canvas 560 0 1120 1022 10;
 #X obj 602 24 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 709 250 folder_list ./instruments/*/;
 #X obj 733 183 text define instruments;
@@ -33,6 +33,7 @@
 #X obj 528 185 unpack s s;
 #X obj 294 251 t b f;
 #X msg 360 320 \; screenLine1 K88: \$1 \;;
+#X text 14 10 Copyright (c) 2025 Jonathan Schoonhoven All rights reserved. Redistribution and use of this file \, in source or binary form \, without explicit permission from the copyright holder is prohibited., f 73;
 #X connect 0 0 20 0;
 #X connect 1 0 18 0;
 #X connect 4 0 3 0;

@@ -1,4 +1,4 @@
-#N canvas 1003 0 2005 1664 12;
+#N canvas 0 0 1680 1022 12;
 #X obj 317 96 inlet;
 #X msg 318 293 88;
 #X obj 318 333 until;
@@ -36,9 +36,9 @@
 #X obj 1009 352 text delete _wav_files;
 #X text 1208 326 <-- ensure lists are empty at start;
 #X obj 924 175 text define -k _note_to_wav;
-#A set 84 f instruments/rhodes/C6f.wav \; 84 m instruments/rhodes/C6.wav \; 82 p instruments/rhodes/Bb5p.wav \; 79 p instruments/rhodes/G5p.wav \; 79 m instruments/rhodes/G5.wav \; 75 f instruments/rhodes/Eb5f.wav \; 72 f instruments/rhodes/C5f.wav \; 72 p instruments/rhodes/C5p.wav \; 72 m instruments/rhodes/C5.wav \; 67 f instruments/rhodes/G4f.wav \; 65 p instruments/rhodes/F4p.wav \; 65 m instruments/rhodes/F4.wav \; 63 f instruments/rhodes/Eb4f.wav \; 63 m instruments/rhodes/Eb4.wav \; 60 f instruments/rhodes/C4f.wav \; 58 p instruments/rhodes/Bb3p.wav \; 58 m instruments/rhodes/Bb3.wav \; 51 f instruments/rhodes/Eb3f.wav \; 51 p instruments/rhodes/Eb3p.wav \; 51 m instruments/rhodes/Eb3.wav \; 48 f instruments/rhodes/C3f.wav \; 48 p instruments/rhodes/C3p.wav \; 48 m instruments/rhodes/C3.wav \; 43 f instruments/rhodes/G2f.wav \; 43 p instruments/rhodes/G2p.wav \; 43 m instruments/rhodes/G2.wav \; 39 f instruments/rhodes/Eb2f.wav \; 36 p instruments/rhodes/C2p.wav \; 36 m instruments/rhodes/C2.wav \; 31 f instruments/rhodes/G1f.wav \; 31 p instruments/rhodes/G1p.wav \; 31 m instruments/rhodes/G1.wav \; 27 p instruments/rhodes/Eb1p.wav \; 24 p instruments/rhodes/C1p.wav \; 24 m instruments/rhodes/C1.wav \; 22 f instruments/rhodes/Bb0f.wav \;;
+#A set 107 4 instruments/Studio\ Piano/B7f.wav \; 107 1 instruments/Studio\ Piano/B7p.wav \; 107 3 instruments/Studio\ Piano/B7m.wav \; 101 4 instruments/Studio\ Piano/F7f.wav \; 101 1 instruments/Studio\ Piano/F7p.wav \; 101 3 instruments/Studio\ Piano/F7m.wav \; 95 4 instruments/Studio\ Piano/B6f.wav \; 95 1 instruments/Studio\ Piano/B6p.wav \; 95 3 instruments/Studio\ Piano/B6m.wav \; 89 4 instruments/Studio\ Piano/F6f.wav \; 89 1 instruments/Studio\ Piano/F6p.wav \; 89 3 instruments/Studio\ Piano/F6m.wav \; 83 4 instruments/Studio\ Piano/B5f.wav \; 83 1 instruments/Studio\ Piano/B5p.wav \; 83 3 instruments/Studio\ Piano/B5m.wav \; 77 4 instruments/Studio\ Piano/F5f.wav \; 77 1 instruments/Studio\ Piano/F5p.wav \; 77 3 instruments/Studio\ Piano/F5m.wav \; 71 4 instruments/Studio\ Piano/B4f.wav \; 71 1 instruments/Studio\ Piano/B4p.wav \; 71 3 instruments/Studio\ Piano/B4m.wav \; 65 4 instruments/Studio\ Piano/F4f.wav \; 65 1 instruments/Studio\ Piano/F4p.wav \; 65 3 instruments/Studio\ Piano/F4m.wav \; 59 4 instruments/Studio\ Piano/B3f.wav \; 59 1 instruments/Studio\ Piano/B3p.wav \; 59 3 instruments/Studio\ Piano/B3m.wav \; 53 4 instruments/Studio\ Piano/F3f.wav \; 53 1 instruments/Studio\ Piano/F3p.wav \; 53 3 instruments/Studio\ Piano/F3m.wav \; 47 4 instruments/Studio\ Piano/B2f.wav \; 47 1 instruments/Studio\ Piano/B2p.wav \; 47 3 instruments/Studio\ Piano/B2m.wav \; 41 4 instruments/Studio\ Piano/F2f.wav \; 41 1 instruments/Studio\ Piano/F2p.wav \; 41 3 instruments/Studio\ Piano/F2m.wav \; 35 4 instruments/Studio\ Piano/B1f.wav \; 35 1 instruments/Studio\ Piano/B1p.wav \; 35 3 instruments/Studio\ Piano/B1m.wav \; 29 4 instruments/Studio\ Piano/F1f.wav \; 29 1 instruments/Studio\ Piano/F1p.wav \; 29 3 instruments/Studio\ Piano/F1m.wav \; 23 4 instruments/Studio\ Piano/B0f.wav \; 23 1 instruments/Studio\ Piano/B0p.wav \; 23 3 instruments/Studio\ Piano/B0m.wav \;;
 #X obj 925 206 text define -k _wav_files;
-#A set G5p.wav \; G5.wav \; G4f.wav \; G2p.wav \; G2f.wav \; G2.wav \; G1p.wav \; G1f.wav \; G1.wav \; G0f.wav \; G0.wav \; F4p.wav \; F4.wav \; Eb5f.wav \; Eb4f.wav \; Eb4.wav \; Eb3p.wav \; Eb3f.wav \; Eb3.wav \; Eb2f.wav \; Eb1p.wav \; C6f.wav \; C6.wav \; C5p.wav \; C5f.wav \; C5.wav \; C4f.wav \; C3p.wav \; C3f.wav \; C3.wav \; C2p.wav \; C2.wav \; C1p.wav \; C1.wav \; Bb5p.wav \; Bb3p.wav \; Bb3.wav \; Bb0f.wav \;;
+#A set LICENSE.txt \; F7p.wav \; F7m.wav \; F7f.wav \; F6p.wav \; F6m.wav \; F6f.wav \; F5p.wav \; F5m.wav \; F5f.wav \; F4p.wav \; F4m.wav \; F4f.wav \; F3p.wav \; F3m.wav \; F3f.wav \; F2p.wav \; F2m.wav \; F2f.wav \; F1p.wav \; F1m.wav \; F1f.wav \; B7p.wav \; B7m.wav \; B7f.wav \; B6p.wav \; B6m.wav \; B6f.wav \; B5p.wav \; B5m.wav \; B5f.wav \; B4p.wav \; B4m.wav \; B4f.wav \; B3p.wav \; B3m.wav \; B3f.wav \; B2p.wav \; B2m.wav \; B2f.wav \; B1p.wav \; B1m.wav \; B1f.wav \; B0p.wav \; B0m.wav \; B0f.wav \;;
 #X obj 1123 637 text insert _wav_files;
 #X obj 184 1077 text search _wav_files;
 #X obj 184 1108 select -1;
@@ -90,6 +90,7 @@
 #X msg 468 716 1;
 #X msg 391 716 4;
 #X text 173 717 forte=4 \; mezzo=3 \; piano=1 -->;
+#X text 1013 20 Copyright (c) 2025 Jonathan Schoonhoven All rights reserved. Redistribution and use of this file \, in source or binary form \, without explicit permission from the copyright holder is prohibited., f 73;
 #X connect 0 0 41 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;

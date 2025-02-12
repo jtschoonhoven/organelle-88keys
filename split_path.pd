@@ -1,4 +1,4 @@
-#N canvas -1706 -433 1706 1387 12;
+#N canvas 0 0 1680 1022 12;
 #X obj 251 141 list fromsymbol;
 #X obj 251 207 list length;
 #X obj 251 272 until;
@@ -30,6 +30,7 @@
 #X text 52 443 pop off end of the list -->;
 #X text 562 460 <-- ignore trailing slashes;
 #X obj 506 492 t b b;
+#X text 561 16 Copyright (c) 2025 Jonathan Schoonhoven All rights reserved. Redistribution and use of this file \, in source or binary form \, without explicit permission from the copyright holder is prohibited., f 73;
 #X connect 0 0 13 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
