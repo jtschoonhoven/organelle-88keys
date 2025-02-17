@@ -1,1 +1,1 @@
-instrument Saw;
+instrument Studio Piano;
